@@ -1,0 +1,16 @@
+# Data & Outputs
+data/*.npy
+data/*.npz
+data/*.txt
+!data/MANIFEST.md
+runs/
+wandb/
+*.ckpt
+figures/*.png
+!results/*.json
+
+# Python & Environment
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
