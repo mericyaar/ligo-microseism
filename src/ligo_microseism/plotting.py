@@ -5,8 +5,21 @@ from scipy.signal import freqz
 
 from ligo_microseism.config import FS, TAPS, FREQ_BAND, Causality_gap
 from ligo_microseism.signal_utils import bandpass, CRMS_Inband
+from pathlib import Path
 
-def FIR_Channel_Plot(w, X_std, y_std, channels, K=TAPS, gap=Causality_gap, fs=FS):
+def _finish(fig, save_dir=None, name=None, show=True, dpi=150):
+    fig.tight_layout()
+    if save_dir and name:
+        out = Path(save_dir); out.mkdir(parents=True, exist_ok=True)
+        fig.savefig(out / f'{name}.pdf', bbox_inches='tight')   
+        fig.savefig(out / f'{name}.png', dpi=dpi, bbox_inches='tight')
+        print(f'  figure -> {out}/{name}.pdf')
+    if show:
+        plt.show()
+    else:
+        plt.close(fig)    
+
+def FIR_Channel_Plot(w, X_std, y_std, channels, K=TAPS, gap=Causality_gap, fs=FS, save_path=None, show=True):
     C = len(channels)
     W = w.reshape(C, K)
     lags = np.arange(gap, K+gap) / fs
@@ -30,13 +43,17 @@ def FIR_Channel_Plot(w, X_std, y_std, channels, K=TAPS, gap=Causality_gap, fs=FS
     ax.legend()
     ax.grid(which='both', alpha=0.25)
 
-    plt.tight_layout()
-    plt.show()
-
+    fig.tight_layout()
+    if save_path:
+        fig.savefig(save_path, bbox_inches='tight')
+    if show:
+        plt.show()
+    else:
+        plt.close(fig)
     return pd.DataFrame(rows)
 
 
-def Blind_Plots(Results_library, cav, band=FREQ_BAND, time_chunk=(5000, 10000), gap = Causality_gap, K = TAPS, bandpass_plot=False):
+def Blind_Plots(Results_library, cav, band=FREQ_BAND, time_chunk=(5000, 10000), gap = Causality_gap, K = TAPS, bandpass_plot=False, save_dir = None, show = True):
     # Loop through the two blind data types
     for data_type in ['Blind_Noisy', 'Blind_Quiet']:
 
@@ -138,11 +155,11 @@ def Blind_Plots(Results_library, cav, band=FREQ_BAND, time_chunk=(5000, 10000), 
             if amp_ratio > 3:
                 print(f' Prediction peak is {amp_ratio:.1f}× the true signal — out-of-band overfitting, ridge likely too low')
 
-            plt.tight_layout()
-            plt.show()
+            _finish(fig, save_dir, f'{cav}_{data_type}_{name}', show)          # Blind_Plots
 
 
-def Sweep_Plots(library, cav, channels, suppression_plot='Noisy', training_type='Noisy', band=FREQ_BAND, time_chunk=(5000, 10000)):
+
+def Sweep_Plots(library, cav, channels, suppression_plot='Noisy', training_type='Noisy', band=FREQ_BAND, time_chunk=(5000, 10000), save_dir = None, show = True):
     # Extracts the nested dictionaries
     lofo_lib = library['LOFO_Training']
     other_lib = library.get('Other', {})
@@ -315,5 +332,6 @@ def Sweep_Plots(library, cav, channels, suppression_plot='Noisy', training_type=
     ax.legend(loc='best', framealpha=0.9)
     ax.set_ylim(0.0, suppression_ylim_upper)
 
-    plt.tight_layout()
-    plt.show()
+    _finish(fig, save_dir, f'{cav}_bode', show)                        # Sweep_Plots, fig 1
+    _finish(fig, save_dir, f'{cav}_suppression', show)                 # fig 2
+    _finish(fig, save_dir, f'{cav}_suppression_vs_blrms', show)        # fig 3

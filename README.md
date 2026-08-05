@@ -13,8 +13,11 @@ python scripts/run_fir.py --cavity PRCL --run-type Sweep
 ```
 
 ### Evaluation
-Evaluation is built directly into the pipeline execution. The script automatically evaluates the model against blind datasets and generate diagnostic figures (ASD, time-series, and coherence).
+Evaluation results are recorded to the results folder with the run script, to visualize use:
+```bash
+python scripts/make_figures.py
+```
 
 
 ## Future Work
-The codebase is ready to run parallel trainings and sweeps via the CLI. We are currently migrating our self-test battery into tests/ to establish a strict pytest harness for causality (using the causality_gap horizon) and future-leakage prevention. We also plan to automate paper-ready tables from results/*.json and connect the repository to Zenodo for publication.
+The codebase is ready to run parallel trainings and sweeps via the CLI. We are currently migrating our self-test battery into tests/ to establish a strict pytest harness for causality (using the causality_gap horizon) and future-leakage prevention. We are also working on the graphs and tables to get them ready for publication.

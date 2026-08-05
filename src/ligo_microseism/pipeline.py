@@ -67,15 +67,6 @@ def LOFO(library, alphas=Alphas, band=FREQ_BAND):
     if last_good_alpha is None:
         raise ValueError("Model instability in LOFO sweep.")
 
-    fig, ax = plt.subplots(1, 1, figsize=(6, 4))
-    ax.plot(tested_alphas, score_list, marker='o', color='maroon', lw=1.5)
-    ax.set_xscale('log')
-    ax.set_xlabel('Ridge Alpha')
-    ax.set_ylabel('Average LOFO CRMS (Z-space)')
-    ax.set_title('Hyperparameter Sweep (LOFO)', fontweight='bold')
-    ax.grid(which='both', alpha=0.3)
-    plt.tight_layout()
-    plt.show()
 
     final_alpha = last_good_alpha
     print(f'\nWinning Alpha: {final_alpha:.0e} | Avg LOFO CRMS: {last_good_score:.4f}')

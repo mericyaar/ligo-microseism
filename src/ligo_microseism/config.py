@@ -12,7 +12,7 @@ TRIM_Seconds = 400 #seconds how much to trim from each ends
 
 #:::::::::: Controls ::::::::::::::::::
 Cavity = 'DARM'
-Run_Type = 'Sweep'
+Run_Type = 'Blind'
 Training_Type = 'Noisy'
 
 
@@ -21,11 +21,11 @@ Bandpass_Training = True
 # !!! Bandpass Blind does not apply to Sweep !!!
 Bandpass_Blind = True
 
-Run_Delay = True
+Run_Delay = False
 # :::::::::::: Blind Indices :::::::::::
-Noisy_Blind_idx = [0]
+Noisy_Blind_idx = [4]
 Quiet_Blind_idx = []
-Causality_gap = 4 # how many samples gap should the input and output have (in samples i.e. 1=0.25s for 4 Hz) 
+Causality_gap = 0 # how many samples gap should the input and output have (in samples i.e. 1=0.25s for 4 Hz) 
 # ----FIR----
 Lookback = 66 #seconds The past FIR engine has access to
 Alphas = (1e-7, 1e-5) # Ridge strength list
