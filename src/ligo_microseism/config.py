@@ -12,7 +12,7 @@ TRIM_Seconds = 400 #seconds how much to trim from each ends
 
 #:::::::::: Controls ::::::::::::::::::
 Cavity = 'DARM'
-Run_Type = 'Sweep'
+Run_Type = 'Blind'
 Training_Type = 'Noisy'
 
 
@@ -23,7 +23,7 @@ Bandpass_Blind = True
 
 Run_Delay = False
 # :::::::::::: Blind Indices :::::::::::
-Noisy_Blind_idx = [4]
+Noisy_Blind_idx = [2,6]
 Quiet_Blind_idx = []
 Causality_gap = 1 # how many samples gap should the input and output have (in samples i.e. 1=0.25s for 4 Hz) 
 # ----FIR----

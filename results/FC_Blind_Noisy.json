@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "cavity": "FC",
+    "run_type": "Blind",
+    "training_type": "Noisy",
+    "created": "2026-08-06T18:25:41+00:00",
+    "config": {
+      "TAPS": 265,
+      "Causality_gap": 1,
+      "FREQ_BAND": [
+        0.03,
+        0.25
+      ],
+      "FS": 4.0,
+      "Alphas": [
+        1e-07,
+        1e-05
+      ],
+      "Bandpass_Training": true
+    },
+    "fit": {
+      "alpha": 1e-07,
+      "y_Mean": 3.357662824663541e-11,
+      "y_Std": 3.0752025278408104e-07
+    }
+  },
+  "results": {
+    "Blind_Noisy": {
+      "1422266402": {
+        "CRMS_Real": 3.899692644168226e-07,
+        "CRMS_Res": 8.268503164723174e-08,
+        "mean_blrms": 943.7833880620644,
+        "supp": 4.71632236993742,
+        "variance_explained": 0.955043443829769,
+        "variance_explained_percent": 95.5043443829769,
+        "CRMS_Delay_Res": 1.3640783785975676e-07,
+        "supp_Delay": 2.8588479264494806
+      },
+      "1424689218": {
+        "CRMS_Real": 2.3922776176938743e-07,
+        "CRMS_Res": 4.1114323980310326e-08,
+        "mean_blrms": 1023.6653144097806,
+        "supp": 5.818598936077698,
+        "variance_explained": 0.9704632196367007,
+        "variance_explained_percent": 97.04632196367007,
+        "CRMS_Delay_Res": 9.662049703270515e-08,
+        "supp_Delay": 2.4759525061065566
+      }
+    },
+    "Blind_Quiet": {}
+  }
+}
