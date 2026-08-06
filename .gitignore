@@ -1,10 +1,9 @@
 # Data & Outputs
-data/*.npy
-data/*.npz
-data/*.txt
-Noisy/
-Quiet/
-data/
+data/Noisy/*
+data/Quiet/*
+
+!data/Noisy/.gitkeep
+!data/Quiet/.gitkeep
 !data/MANIFEST.md
 runs/
 wandb/
