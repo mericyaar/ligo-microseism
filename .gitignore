@@ -2,6 +2,9 @@
 data/*.npy
 data/*.npz
 data/*.txt
+Noisy/
+Quiet/
+data/
 !data/MANIFEST.md
 runs/
 wandb/
