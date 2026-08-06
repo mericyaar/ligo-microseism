@@ -218,8 +218,8 @@ def Sweep_Plots(library, cav, channels, suppression_plot='Noisy', training_type=
         ax_phase.set_xlim(0.01, 0.5)
 
     fig.suptitle(f"{cav} FIR Frequency Response Stability Across {len(lofo_names)} Folds", fontsize=14, fontweight='bold')
-    plt.tight_layout()
-    plt.show()
+    _finish(fig, save_dir, f'{cav}_bode', show)         
+
 
     # Plot 2: Suppression
     plot_selection = suppression_plot.strip().capitalize()
@@ -295,8 +295,7 @@ def Sweep_Plots(library, cav, channels, suppression_plot='Noisy', training_type=
     ax.legend(loc='upper right', framealpha=0.9)
 
     plt.xticks(rotation=45, ha='right')
-    plt.tight_layout()
-    plt.show()
+    _finish(fig, save_dir, f'{cav}_suppression', show)   # <-- HERE
 
     # Plot 3: Suppression versus mean 100–300 mHz BLRMS
     fig, ax = plt.subplots(figsize=(6, 5))
@@ -330,8 +329,5 @@ def Sweep_Plots(library, cav, channels, suppression_plot='Noisy', training_type=
     ax.set_xlabel('Mean 100–300 mHz BLRMS')
     ax.set_ylabel('In-Band Suppression (x)')
     ax.legend(loc='best', framealpha=0.9)
-    ax.set_ylim(0.0, suppression_ylim_upper)
-
-    _finish(fig, save_dir, f'{cav}_bode', show)                        # Sweep_Plots, fig 1
-    _finish(fig, save_dir, f'{cav}_suppression', show)                 # fig 2
-    _finish(fig, save_dir, f'{cav}_suppression_vs_blrms', show)        # fig 3
+    ax.set_ylim(0.0, suppression_ylim_upper)              
+    _finish(fig, save_dir, f'{cav}_suppression_vs_blrms', show)      

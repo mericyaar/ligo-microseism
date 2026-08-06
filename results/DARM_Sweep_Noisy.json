@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "cavity": "DARM",
+    "run_type": "Sweep",
+    "training_type": "Noisy",
+    "created": "2026-08-06T17:21:27+00:00",
+    "config": {
+      "TAPS": 265,
+      "Causality_gap": 1,
+      "FREQ_BAND": [
+        0.03,
+        0.25
+      ],
+      "FS": 4.0,
+      "Alphas": [
+        1e-07,
+        1e-05
+      ],
+      "Bandpass_Training": true
+    },
+    "fit": {}
+  },
+  "results": {
+    "LOFO_Training": {
+      "1424916018": {
+        "CRMS_Real": 8.69755239084743e-07,
+        "CRMS_Res": 1.2169000832922284e-07,
+        "supp": 7.147301993206278,
+        "variance_explained": 0.9804243705883977,
+        "variance_explained_percent": 98.04243705883977,
+        "mean_blrms": 643.8761315534753,
+        "CRMS_Delay_Res": 5.749200044287767e-07,
+        "supp_Delay": 1.5128282759075427
+      },
+      "1420675218": {
+        "CRMS_Real": 1.0030075678222062e-06,
+        "CRMS_Res": 9.837468361548059e-08,
+        "supp": 10.195789515752702,
+        "variance_explained": 0.9903803720047948,
+        "variance_explained_percent": 99.03803720047948,
+        "mean_blrms": 842.9177510055118,
+        "CRMS_Delay_Res": 6.523655831254362e-07,
+        "supp_Delay": 1.5374930771437536
+      },
+      "1422266402": {
+        "CRMS_Real": 9.352011960111473e-07,
+        "CRMS_Res": 1.153293708915281e-07,
+        "supp": 8.108959485183888,
+        "variance_explained": 0.9847920828156748,
+        "variance_explained_percent": 98.47920828156748,
+        "mean_blrms": 943.7833880620644,
+        "CRMS_Delay_Res": 6.362833691559798e-07,
+        "supp_Delay": 1.4697872698632333
+      },
+      "1417615060": {
+        "CRMS_Real": 7.54501414618685e-07,
+        "CRMS_Res": 8.664326917343209e-08,
+        "supp": 8.708136498271028,
+        "variance_explained": 0.9868128925707114,
+        "variance_explained_percent": 98.68128925707114,
+        "mean_blrms": 1054.420938861272,
+        "CRMS_Delay_Res": 4.646310028565038e-07,
+        "supp_Delay": 1.6238722986199534
+      },
+      "1417838418": {
+        "CRMS_Real": 7.394500939384891e-07,
+        "CRMS_Res": 9.410469850923888e-08,
+        "supp": 7.857738302683074,
+        "variance_explained": 0.9838041077638553,
+        "variance_explained_percent": 98.38041077638553,
+        "mean_blrms": 806.5294999380309,
+        "CRMS_Delay_Res": 4.6713974408597147e-07,
+        "supp_Delay": 1.582931239099198
+      },
+      "1422316818": {
+        "CRMS_Real": 6.450278063537051e-07,
+        "CRMS_Res": 1.4212047913071513e-07,
+        "supp": 4.538598591132258,
+        "variance_explained": 0.9514536646013366,
+        "variance_explained_percent": 95.14536646013366,
+        "mean_blrms": 804.7724373358416,
+        "CRMS_Delay_Res": 4.530395762934137e-07,
+        "supp_Delay": 1.4237780540743512
+      },
+      "1424689218": {
+        "CRMS_Real": 7.331226108898352e-07,
+        "CRMS_Res": 7.969563339183546e-08,
+        "supp": 9.199031109839213,
+        "variance_explained": 0.9881827662857549,
+        "variance_explained_percent": 98.81827662857549,
+        "mean_blrms": 1023.6653144097806,
+        "CRMS_Delay_Res": 5.315596654306339e-07,
+        "supp_Delay": 1.3791915725883914
+      },
+      "1420416018": {
+        "CRMS_Real": 1.1419495391158545e-06,
+        "CRMS_Res": 1.0266691860255179e-07,
+        "supp": 11.12285782664438,
+        "variance_explained": 0.9919170995898297,
+        "variance_explained_percent": 99.19170995898297,
+        "mean_blrms": 731.2278478769425,
+        "CRMS_Delay_Res": 7.063144830854866e-07,
+        "supp_Delay": 1.6167720844790352
+      },
+      "1418934929": {
+        "CRMS_Real": 1.0383091977011039e-06,
+        "CRMS_Res": 1.2128726184371879e-07,
+        "supp": 8.560743988424665,
+        "variance_explained": 0.986354891890277,
+        "variance_explained_percent": 98.63548918902771,
+        "mean_blrms": 1185.0131948810701,
+        "CRMS_Delay_Res": 7.230906941117705e-07,
+        "supp_Delay": 1.4359321813379735
+      },
+      "1420851618": {
+        "CRMS_Real": 1.164978640695073e-06,
+        "CRMS_Res": 1.3526967725849893e-07,
+        "supp": 8.612267466779056,
+        "variance_explained": 0.9865176690990346,
+        "variance_explained_percent": 98.65176690990346,
+        "mean_blrms": 756.2580755510347,
+        "CRMS_Delay_Res": 7.506301125402728e-07,
+        "supp_Delay": 1.5520009405865256
+      },
+      "1424736018": {
+        "CRMS_Real": 8.67277392175117e-07,
+        "CRMS_Res": 9.363984519654598e-08,
+        "supp": 9.261841370569753,
+        "variance_explained": 0.9883425027129819,
+        "variance_explained_percent": 98.83425027129819,
+        "mean_blrms": 899.4156661191275,
+        "CRMS_Delay_Res": 6.515320312291568e-07,
+        "supp_Delay": 1.3311354631927195
+      },
+      "1417846196": {
+        "CRMS_Real": 7.63851641720534e-07,
+        "CRMS_Res": 1.0297445917133935e-07,
+        "supp": 7.417874761056624,
+        "variance_explained": 0.9818263982590688,
+        "variance_explained_percent": 98.18263982590688,
+        "mean_blrms": 895.5645857176238,
+        "CRMS_Delay_Res": 4.900633322083721e-07,
+        "supp_Delay": 1.5586794430801216
+      },
+      "1420344018": {
+        "CRMS_Real": 9.800422765001562e-07,
+        "CRMS_Res": 1.4325948056370892e-07,
+        "supp": 6.841029107768694,
+        "variance_explained": 0.9786323321878608,
+        "variance_explained_percent": 97.86323321878608,
+        "mean_blrms": 745.3890610746917,
+        "CRMS_Delay_Res": 6.496919063003241e-07,
+        "supp_Delay": 1.5084723497342225
+      },
+      "1423267218": {
+        "CRMS_Real": 5.454367176543484e-07,
+        "CRMS_Res": 7.494394411861101e-08,
+        "supp": 7.277929178521828,
+        "variance_explained": 0.9811207668564904,
+        "variance_explained_percent": 98.11207668564904,
+        "mean_blrms": 756.0778987883307,
+        "CRMS_Delay_Res": 3.811005950545189e-07,
+        "supp_Delay": 1.4312145526204707
+      },
+      "1423274418": {
+        "CRMS_Real": 5.924548814065935e-07,
+        "CRMS_Res": 7.604283014089796e-08,
+        "supp": 7.791068274403358,
+        "variance_explained": 0.9835257375775954,
+        "variance_explained_percent": 98.35257375775954,
+        "mean_blrms": 796.0476563581285,
+        "CRMS_Delay_Res": 4.182007941580979e-07,
+        "supp_Delay": 1.4166756488334644
+      }
+    },
+    "Other": {}
+  }
+}

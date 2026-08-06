@@ -75,7 +75,7 @@ def main():
             
     elif args.run_type == 'Sweep':
         print("\n--- Starting Sweep Evaluation ---")
-        sweep_results = Sweep_Cavity(
+        results = Sweep_Cavity(
             data_library, 
             eval_other=args.eval_other, 
             run_delay=args.run_delay
